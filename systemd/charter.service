@@ -1,0 +1,12 @@
+[Unit]
+Description=Charter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/charter
+ExecStart=python -u charter.py
+
+[Install]
+WantedBy=default.target
